@@ -3,7 +3,6 @@ package main
 import (
 	"app/config"
 	"app/controller"
-	"app/models"
 	"app/storage/jsonDb"
 	"fmt"
 	"log"
@@ -89,13 +88,13 @@ func shopCart(c *controller.Controller) {
 
 	// #########################################################  Active Client   ##########################################################################
 
-	// 	history := c.ActiveClient()
+	history := c.ActiveClient()
 
-	// fmt.Println(history)
+	fmt.Println(history)
 
-	name, history := c.Sale(&models.UserPrimaryKey{Id: "c463393b-4690-4dfe-b5e0-7f4a7fa1b21e"})
+	// name, history := c.Sale(&models.UserPrimaryKey{Id: "c463393b-4690-4dfe-b5e0-7f4a7fa1b21e"})
 
-	fmt.Println(name, history)
+	// fmt.Println(name, history)
 }
 
 // func branch(c *controller.Controller) {

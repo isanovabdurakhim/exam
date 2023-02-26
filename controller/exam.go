@@ -236,7 +236,9 @@ func (c *Controller) ActiveClient() error {
 	}
 
 	for _, val := range shopCarts {
-		soldcategory[val.UserId] = soldcategory[val.UserId] + val.Count
+		if val.Status == true {
+			soldcategory[val.UserId] = soldcategory[val.UserId] + val.Count
+		}
 	}
 
 	max := 0
